@@ -3,7 +3,7 @@ package array;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Homework {
+public class homework {
     public static void main(String[] args) {
         // Read a line of text such as “I love Java. You love Java. She loves Java.”
         // Split them into words
