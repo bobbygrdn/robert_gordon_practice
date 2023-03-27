@@ -46,12 +46,15 @@ public class homework {
 
     private static void printOccurances(HashMap<String, Integer> map) {
         for (String word : map.keySet()) {
-            if (map.get(word) == 1) {
-                System.out.println(word + " occurs once");
-            } else if (map.get(word) == 2) {
-                System.out.println(word + " occurs twice");
-            } else if (map.get(word) >= 3) {
-                System.out.println(word + " occurs 3 times");
+            switch (map.get(word)) {
+                case 1:
+                    System.out.println(word + " occurs once");
+                    break;
+                case 2:
+                    System.out.println(word + " occurs twice");
+                    break;
+                default:
+                    System.out.println(word + " occurs " + map.get(word) + " times");
             }
         }
     }
