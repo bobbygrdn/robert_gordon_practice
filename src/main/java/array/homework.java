@@ -1,50 +1,75 @@
 package array;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class homework {
     public static void main(String[] args) {
-        try (Scanner scan = new Scanner(System.in)) {
-            System.out.println("Enter a line of text: ");
-            String line = scan.nextLine();
-            System.out.println();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter text: ");
+            String text = sc.nextLine();
 
-            String[] words = line.replace(".", "").split(" ");
+            String[] words = text.replace(".", "").split(" "); // split text into words
 
-            HashMap<String, Integer> map = findOccurances(words);
+            String[] uniqueWords = getUniqueWords(words); // get unique words
 
-            printOccurances(map);
+            int[] counts = getCounts(uniqueWords, words); // initialize array to hold counts
+
+            printOccurances(uniqueWords, counts); // print results
 
         }
-
     }
 
-    private static HashMap<String, Integer> findOccurances(String[] words) {
-        HashMap<String, Integer> map = new HashMap<>();
+    // helper method to get unique words
+    private static String[] getUniqueWords(String[] words) {
+        String[] uniqueWords = new String[words.length];
+        int count = 0;
+        for (int i = 0; i < words.length; i++) {
+            if (!isWordInArray(words[i], uniqueWords)) {
+                uniqueWords[count] = words[i];
+                count++;
+            }
+        }
+        String[] result = new String[count];
+        for (int i = 0; i < count; i++) {
+            result[i] = uniqueWords[i];
+        }
+        return result;
+    }
 
-        for (String word : words) {
-            if (map.containsKey(word)) {
-                map.put(word, map.get(word) + 1);
+    // helper method to check if a word is in an array
+    private static boolean isWordInArray(String word, String[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (word.equals(array[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // helper method to print results
+    private static void printOccurances(String[] uniqueWords, int[] counts) {
+        for (int i = 0; i < uniqueWords.length; i++) {
+            if (counts[i] == 1) {
+                System.out.printf("\"%s\" occurs once\n", uniqueWords[i]);
+            } else if (counts[i] == 2) {
+                System.out.printf("\"%s\" occurs twice\n", uniqueWords[i]);
             } else {
-                map.put(word, 1);
+                System.out.printf("\"%s\" occurs %d times\n", uniqueWords[i], counts[i]);
             }
         }
-        return map;
     }
 
-    private static void printOccurances(HashMap<String, Integer> map) {
-        for (String word : map.keySet()) {
-            switch (map.get(word)) {
-                case 1:
-                    System.out.printf("\"%s\" occurs once\n", word);
-                    break;
-                case 2:
-                    System.out.printf("\"%s\" occurs twice\n", word);
-                    break;
-                default:
-                    System.out.printf("\"%s\" occurs %s times\n", word, map.get(word));
+    // helper method to get counts
+    private static int[] getCounts(String[] uniqueWords, String[] words) {
+        int[] counts = new int[uniqueWords.length];
+
+        for (int i = 0; i < uniqueWords.length; i++) {
+            for (int j = 0; j < words.length; j++) {
+                if (uniqueWords[i].equals(words[j])) {
+                    counts[i]++;
+                }
             }
         }
+        return counts;
     }
 }
