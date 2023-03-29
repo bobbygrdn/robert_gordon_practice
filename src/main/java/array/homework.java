@@ -5,17 +5,6 @@ import java.util.Scanner;
 
 public class homework {
     public static void main(String[] args) {
-        // Read a line of text such as “I love Java. You love Java. She loves Java.”
-        // Split them into words
-        // Count number of times each word (excluding dot .) occurs
-        // So the end result is something like following:
-        // "I" occurs once
-        // "love" occurs twice
-        // "Java" occurs 3 times
-        // "You" occurs once
-        // "She" occurs once
-        // "loves" occurs once
-
         try (Scanner scan = new Scanner(System.in)) {
             System.out.println("Enter a line of text: ");
             String line = scan.nextLine();
@@ -48,13 +37,13 @@ public class homework {
         for (String word : map.keySet()) {
             switch (map.get(word)) {
                 case 1:
-                    System.out.println(word + " occurs once");
+                    System.out.printf("\"%s\" occurs once\n", word);
                     break;
                 case 2:
-                    System.out.println(word + " occurs twice");
+                    System.out.printf("\"%s\" occurs twice\n", word);
                     break;
                 default:
-                    System.out.println(word + " occurs " + map.get(word) + " times");
+                    System.out.printf("\"%s\" occurs %s times\n", word, map.get(word));
             }
         }
     }
