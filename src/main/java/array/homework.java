@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class homework {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
-            System.out.print("Enter text: ");
+            System.out.print("Enter text: "); // Get user input
             String text = sc.nextLine();
 
             String[] words = text.replace(".", "").split(" "); // split text into words
