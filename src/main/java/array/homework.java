@@ -12,7 +12,7 @@ public class homework {
 
             String[] uniqueWords = getUniqueWords(words); // get unique words
 
-            int[] counts = getCounts(uniqueWords, words); // initialize array to hold counts
+            int[] counts = getCounts(uniqueWords, words); // get word counts
 
             printOccurances(uniqueWords, counts); // print results
 
