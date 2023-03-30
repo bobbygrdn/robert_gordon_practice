@@ -16,6 +16,7 @@ public class ATM {
         this.pin = pin;
     }
 
+    // Getters and Setters
     public String getName() {
         return name;
     }
@@ -48,7 +49,7 @@ public class ATM {
         this.pin = pin;
     }
 
-    // Methods
+    // Custom Methods
     public void deposit(int amount) {
         this.balance += amount;
     }
@@ -78,6 +79,17 @@ public class ATM {
         System.out.println("3. Check balance");
         System.out.println("4. Exit");
         System.out.println();
+    }
+
+    public void userInfo() {
+        System.out.println(name);
+        System.out.println(password);
+        System.out.println(balance);
+        System.out.println(pin);
+    }
+
+    public static void bankName(String name) {
+        System.out.printf("The name of the bank is %s\n", name);
     }
 
 }
