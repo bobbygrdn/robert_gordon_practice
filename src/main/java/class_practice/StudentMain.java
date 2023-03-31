@@ -11,7 +11,7 @@ public class StudentMain {
 
         System.out.println(StudentRecord.getStudentCount());
 
-        student1.print(student1.getName(), student1.getAverageScore());
+        student1.print(student1.getName());
         student2.print(student2.getName(), student2.getAverageScore());
     }
 }
