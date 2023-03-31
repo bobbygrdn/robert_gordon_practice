@@ -2,7 +2,7 @@ package class_practice;
 
 import java.util.Scanner;
 
-public class Main {
+public class BankMain {
     public static void main(String[] args) {
 
         // Calling the static method bankName from the ATM class.
