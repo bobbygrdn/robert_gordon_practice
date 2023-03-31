@@ -1,5 +1,7 @@
 package class_practice;
 
+import java.util.ArrayList;
+
 public class Customer {
     private String customerName;
     private String address;
@@ -50,8 +52,8 @@ public class Customer {
         System.out.println("Address: " + address);
         System.out.println("Email: " + email);
         System.out.println("Purchased Products: ");
-        for (String product : purchasedProducts) {
-            System.out.println(product);
+        for (String purchasedProduct : purchasedProducts) {
+            System.out.println(purchasedProduct);
         }
     }
 }
