@@ -78,4 +78,8 @@ public class StudentRecord {
     public void print(String name, double averageScore) {
         System.out.println(name + " " + averageScore);
     }
+
+    public void print(double averageScore) {
+        System.out.println(averageScore);
+    }
 }
