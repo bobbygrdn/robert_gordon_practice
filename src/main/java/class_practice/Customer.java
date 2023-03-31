@@ -1,7 +1,5 @@
 package class_practice;
 
-import java.util.ArrayList;
-
 public class Customer {
     private String customerName;
     private String address;
