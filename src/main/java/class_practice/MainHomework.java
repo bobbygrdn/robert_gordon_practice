@@ -6,7 +6,7 @@ public class MainHomework {
         Product product2 = new Product("Pencil", 1.99);
 
         Customer customer1 = new Customer("John", "123 Main Street", "j@j.com",
-                new String[] { String.valueOf(product1), String.valueOf(product2) });
+                new String[] { product1.getProductName(), product2.getProductName() });
 
         customer1.getCustomerInfo();
     }
