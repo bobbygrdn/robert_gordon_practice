@@ -21,8 +21,7 @@ public class StudentRecord {
     }
 
     public StudentRecord(String name, double mathScore, double scienceScore, double algebraScore) {
-        this(name);
-        this.mathScore = mathScore;
+        this(name, mathScore);
         this.scienceScore = scienceScore;
         this.algebraScore = algebraScore;
     }
