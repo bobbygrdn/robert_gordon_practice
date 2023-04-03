@@ -1,4 +1,4 @@
-package class_practice;
+package class_practice.custom_class;
 
 import java.util.Scanner;
 

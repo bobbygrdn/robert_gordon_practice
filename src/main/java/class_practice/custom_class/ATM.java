@@ -1,4 +1,4 @@
-package class_practice;
+package class_practice.custom_class;
 
 // Let's create an ATM class
 public class ATM {
