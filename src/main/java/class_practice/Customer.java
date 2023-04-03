@@ -51,8 +51,7 @@ public class Customer {
         System.out.println("Email: " + email);
         System.out.println("Purchased Products: ");
         for (Product purchasedProduct : purchasedProducts) {
-            System.out.println(purchasedProduct.getProductName());
-            System.out.println(purchasedProduct.getPrice());
+            System.out.printf("%s %s\n", purchasedProduct.getProductName(), purchasedProduct.getPrice());
         }
     }
 }
