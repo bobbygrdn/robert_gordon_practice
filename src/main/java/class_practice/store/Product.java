@@ -1,4 +1,4 @@
-package class_practice;
+package class_practice.store;
 
 public class Product {
     private String productName;

@@ -1,10 +1,11 @@
-package class_practice;
+package class_practice.store;
 
 public class Customer {
     private String customerName;
     private String address;
     private String email;
     private Product[] purchasedProducts;
+    private Address[] addresses;
 
     public Customer(String customerName, String address, String email, Product[] purchasedProducts) {
         this.customerName = customerName;
