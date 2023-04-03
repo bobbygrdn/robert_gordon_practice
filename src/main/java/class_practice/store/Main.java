@@ -1,5 +1,7 @@
 package class_practice.store;
 
+import class_practice.store.adress.Address;
+
 public class Main {
     public static void main(String[] args) {
         Product product1 = new Product("Pen", 2.99);
@@ -8,6 +10,9 @@ public class Main {
         Customer customer1 = new Customer("John", "123 Main Street", "j@j.com",
                 new Product[] { product1, product2 });
 
+        Address customer1Address = new Address(true, 125, "Main street", "New York City", "New York");
+
+        customer1.addAddress(customer1Address);
         customer1.getCustomerInfo();
     }
 }
