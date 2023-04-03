@@ -1,4 +1,4 @@
-package class_practice.store.adress;
+package class_practice.store.address;
 
 public class Address {
     private boolean isPrimaryAdress;

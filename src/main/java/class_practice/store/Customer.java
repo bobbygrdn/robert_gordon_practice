@@ -1,6 +1,6 @@
 package class_practice.store;
 
-import class_practice.store.adress.Address;
+import class_practice.store.address.Address;
 
 public class Customer {
     private String customerName;
