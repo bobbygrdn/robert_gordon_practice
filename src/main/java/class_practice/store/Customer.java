@@ -4,14 +4,12 @@ import class_practice.store.address.Address;
 
 public class Customer {
     private String customerName;
-    private String address;
     private String email;
     private Product[] purchasedProducts;
     private Address[] addresses = new Address[] {};
 
-    public Customer(String customerName, String address, String email, Product[] purchasedProducts) {
+    public Customer(String customerName, String email, Product[] purchasedProducts) {
         this.customerName = customerName;
-        this.address = address;
         this.email = email;
         this.purchasedProducts = purchasedProducts;
     }
@@ -22,14 +20,6 @@ public class Customer {
 
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getEmail() {
@@ -50,7 +40,6 @@ public class Customer {
 
     public void getCustomerInfo() {
         System.out.println("Customer Name: " + customerName);
-        System.out.println("Address: " + address);
         System.out.println("Email: " + email);
         System.out.println("Purchased Products: ");
         for (Product purchasedProduct : purchasedProducts) {
