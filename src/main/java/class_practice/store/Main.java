@@ -7,7 +7,7 @@ public class Main {
         Product product1 = new Product("Pen", 2.99);
         Product product2 = new Product("Pencil", 1.99);
 
-        Customer customer1 = new Customer("John", "123 Main Street", "j@j.com",
+        Customer customer1 = new Customer("John", "j@j.com",
                 new Product[] { product1, product2 });
 
         Address customer1Address = new Address(true, 125, "Main street", "New York City", "New York");
