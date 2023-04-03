@@ -1,4 +1,4 @@
-package class_practice;
+package class_practice.student;
 
 public class StudentRecord {
     private static int studentCount;

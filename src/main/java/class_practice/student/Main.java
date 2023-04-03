@@ -1,6 +1,6 @@
-package class_practice;
+package class_practice.student;
 
-public class StudentMain {
+public class Main {
     public static void main(String[] args) {
         StudentRecord student1 = new StudentRecord("Charles", 90.5);
 
