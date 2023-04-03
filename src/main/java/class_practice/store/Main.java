@@ -1,6 +1,6 @@
 package class_practice.store;
 
-public class MainHomework {
+public class Main {
     public static void main(String[] args) {
         Product product1 = new Product("Pen", 2.99);
         Product product2 = new Product("Pencil", 1.99);
