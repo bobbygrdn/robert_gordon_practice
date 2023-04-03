@@ -1,5 +1,7 @@
 package class_practice.store;
 
+import class_practice.store.adress.Address;
+
 public class Customer {
     private String customerName;
     private String address;
@@ -54,5 +56,18 @@ public class Customer {
         for (Product purchasedProduct : purchasedProducts) {
             System.out.printf("%s %s\n", purchasedProduct.getProductName(), purchasedProduct.getPrice());
         }
+        for (Address address : addresses) {
+            System.out.println(address.getStreetNumber() + " " + address.getStreetName() + " " + address.getCity() + " "
+                    + address.getState());
+        }
+    }
+
+    public Address[] addAddress(Address address) {
+        addresses = new Address[addresses.length + 1];
+        for (int i = 0; i < addresses.length; i++) {
+            addresses[i] = addresses[i];
+        }
+        addresses[addresses.length - 1] = address;
+        return addresses;
     }
 }
