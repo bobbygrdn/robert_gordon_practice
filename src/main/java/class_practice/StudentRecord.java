@@ -13,17 +13,20 @@ public class StudentRecord {
 
     public StudentRecord(String name) {
         this.name = name;
+        studentCount++;
     }
 
     public StudentRecord(String name, double averageScore) {
         this(name);
         this.mathScore = averageScore;
+        studentCount++;
     }
 
     public StudentRecord(String name, double mathScore, double scienceScore, double algebraScore) {
         this(name, mathScore);
         this.scienceScore = scienceScore;
         this.algebraScore = algebraScore;
+        studentCount++;
     }
 
     public static int getStudentCount() {
