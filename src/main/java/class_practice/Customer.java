@@ -4,9 +4,9 @@ public class Customer {
     private String customerName;
     private String address;
     private String email;
-    private String[] purchasedProducts;
+    private Product[] purchasedProducts;
 
-    public Customer(String customerName, String address, String email, String[] purchasedProducts) {
+    public Customer(String customerName, String address, String email, Product[] purchasedProducts) {
         this.customerName = customerName;
         this.address = address;
         this.email = email;
@@ -37,11 +37,11 @@ public class Customer {
         this.email = email;
     }
 
-    public String[] getPurchasedProducts() {
+    public Product[] getPurchasedProducts() {
         return purchasedProducts;
     }
 
-    public void setPurchasedProducts(String[] purchasedProducts) {
+    public void setPurchasedProducts(Product[] purchasedProducts) {
         this.purchasedProducts = purchasedProducts;
     }
 
@@ -50,8 +50,9 @@ public class Customer {
         System.out.println("Address: " + address);
         System.out.println("Email: " + email);
         System.out.println("Purchased Products: ");
-        for (String purchasedProduct : purchasedProducts) {
-            System.out.println(purchasedProduct);
+        for (Product purchasedProduct : purchasedProducts) {
+            System.out.println(purchasedProduct.getProductName());
+            System.out.println(purchasedProduct.getPrice());
         }
     }
 }
