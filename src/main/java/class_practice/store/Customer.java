@@ -7,7 +7,7 @@ public class Customer {
     private String address;
     private String email;
     private Product[] purchasedProducts;
-    private Address[] addresses;
+    private Address[] addresses = new Address[] {};
 
     public Customer(String customerName, String address, String email, Product[] purchasedProducts) {
         this.customerName = customerName;
@@ -57,8 +57,10 @@ public class Customer {
             System.out.printf("%s %s\n", purchasedProduct.getProductName(), purchasedProduct.getPrice());
         }
         for (Address address : addresses) {
-            System.out.println(address.getStreetNumber() + " " + address.getStreetName() + " " + address.getCity() + " "
-                    + address.getState());
+            System.out.println("Customer Addresses: ");
+            System.out
+                    .println(address.getStreetNumber() + " " + address.getStreetName() + ", " + address.getCity() + ", "
+                            + address.getState());
         }
     }
 
