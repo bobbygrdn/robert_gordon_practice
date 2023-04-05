@@ -11,8 +11,10 @@ public class Main {
                 new Product[] { product1, product2 });
 
         Address customer1Address = new Address(true, 125, "Main street", "New York City", "New York");
+        Address customer2Address = new Address(false, 215, "Second street", "New York City", "New York");
 
         customer1.addAddress(customer1Address);
+        customer1.addAddress(customer2Address);
         customer1.getCustomerInfo();
     }
 }
