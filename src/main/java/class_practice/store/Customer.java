@@ -3,23 +3,13 @@ package class_practice.store;
 import class_practice.store.address.Address;
 
 public class Customer {
-    private String customerName;
     private String email;
     private Product[] purchasedProducts;
     private Address[] addresses = new Address[] {};
 
-    public Customer(String customerName, String email, Product[] purchasedProducts) {
-        this.customerName = customerName;
+    public Customer(String email, Product[] purchasedProducts) {
         this.email = email;
         this.purchasedProducts = purchasedProducts;
-    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
     }
 
     public String getEmail() {
@@ -39,7 +29,6 @@ public class Customer {
     }
 
     public void getCustomerInfo() {
-        System.out.println("Customer Name: " + customerName);
         System.out.println("Email: " + email);
         System.out.println("Purchased Products: ");
         for (Product purchasedProduct : purchasedProducts) {
