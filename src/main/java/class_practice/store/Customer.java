@@ -45,20 +45,24 @@ public class Customer {
         for (Product purchasedProduct : purchasedProducts) {
             System.out.printf("%s %s\n", purchasedProduct.getProductName(), purchasedProduct.getPrice());
         }
+        System.out.println("Customer Addresses: ");
         for (Address address : addresses) {
-            System.out.println("Customer Addresses: ");
+            if (address.isPrimaryAdress()) {
+                System.out.print("*");
+            }
             System.out
-                    .println(address.getStreetNumber() + " " + address.getStreetName() + ", " + address.getCity() + ", "
+                    .println(address.getStreetNumber() + " " + address.getStreetName() + ", " +
+                            address.getCity() + ", "
                             + address.getState());
         }
     }
 
-    public Address[] addAddress(Address address) {
-        addresses = new Address[addresses.length + 1];
+    public void addAddress(Address address) {
+        Address[] newAddresses = new Address[addresses.length + 1];
         for (int i = 0; i < addresses.length; i++) {
-            addresses[i] = addresses[i];
+            newAddresses[i] = this.addresses[i];
         }
-        addresses[addresses.length - 1] = address;
-        return addresses;
+        newAddresses[addresses.length] = address;
+        this.addresses = newAddresses;
     }
 }
