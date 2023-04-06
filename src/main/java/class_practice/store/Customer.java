@@ -3,13 +3,15 @@ package class_practice.store;
 import class_practice.store.address.Address;
 
 public class Customer {
+    private CustomerName customerName;
     private String email;
     private Product[] purchasedProducts;
     private Address[] addresses = new Address[] {};
 
-    public Customer(String email, Product[] purchasedProducts) {
+    public Customer(String email, Product[] purchasedProducts, CustomerName customerName) {
         this.email = email;
         this.purchasedProducts = purchasedProducts;
+        this.customerName = customerName;
     }
 
     public String getEmail() {
@@ -29,6 +31,7 @@ public class Customer {
     }
 
     public void getCustomerInfo() {
+        customerName.printName();
         System.out.println("Email: " + email);
         System.out.println("Purchased Products: ");
         for (Product purchasedProduct : purchasedProducts) {
