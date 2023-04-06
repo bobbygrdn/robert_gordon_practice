@@ -16,6 +16,7 @@ public class Main {
         customer1.addAddress(customer1Address);
         customer1.addAddress(customer2Address);
 
-        customer1.getCustomerInfo();
+        String customer1Info = customer1.getCustomerInfo();
+        System.out.println(customer1Info);
     }
 }
