@@ -14,23 +14,24 @@ public class Customer {
         this.customerName = customerName;
     }
 
-    public void getCustomerInfo() {
-        customerName.printName();
-        System.out.println("Email: " + email);
-        System.out.println("Purchased Products: ");
+    public String getCustomerInfo() {
+        String result = "";
+
+        result += "Customer Name: " + customerName.getFullName() + "\n";
+        result += "Email: " + email + "\n";
+        result += "Purchased Products: ";
         for (Product purchasedProduct : purchasedProducts) {
-            System.out.printf("%s %s\n", purchasedProduct.getProductName(), purchasedProduct.getPrice());
+            result += purchasedProduct.getProductName() + " " + purchasedProduct.getPrice() + "\n";
         }
-        System.out.println("Customer Addresses: ");
+        result += "Customer Addresses: \n";
         for (Address address : addresses) {
             if (address.isPrimaryAdress()) {
-                System.out.print("*");
+                result += "*";
             }
-            System.out
-                    .println(address.getStreetNumber() + " " + address.getStreetName() + ", " +
-                            address.getCity() + ", "
-                            + address.getState());
+            result += address.getStreetNumber() + " " + address.getStreetName() + ", " +
+                    address.getCity() + ", " + address.getState() + "\n";
         }
+        return result;
     }
 
     public void addAddress(Address address) {
