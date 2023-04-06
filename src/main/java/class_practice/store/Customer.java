@@ -57,4 +57,13 @@ public class Customer {
     public void setPurchasedProducts(Product[] purchasedProducts) {
         this.purchasedProducts = purchasedProducts;
     }
+
+    public CustomerName getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(CustomerName customerName) {
+        this.customerName = customerName;
+    }
+
 }
