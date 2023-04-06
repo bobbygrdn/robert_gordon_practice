@@ -15,6 +15,10 @@ public class CustomerName {
         System.out.printf("Customer Name: %s %s %s\n", firstName, middleName, lastName);
     }
 
+    public String getFullName() {
+        return firstName + " " + middleName + " " + lastName;
+    }
+
     public String getFirstName() {
         return firstName;
     }
