@@ -5,6 +5,7 @@ public class Main {
         Student student = new Student("John", "Doe", 20);
         student.setPersonPosition("Student");
 
-        System.out.println(student.sayHello());
+        String studentIntroduction = student.sayHello();
+        System.out.println(studentIntroduction);
     }
 }
