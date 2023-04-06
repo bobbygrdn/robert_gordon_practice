@@ -2,10 +2,10 @@ package inheritance.People;
 
 public class Main {
     public static void main(String[] args) {
-        Student student = new Student("John", "Doe", 20);
-        student.setPersonPosition("Student");
+        Student student1 = new Student("John", "Doe", 20);
+        student1.setPersonPosition("Student");
 
-        String studentIntroduction = student.sayHello();
+        String studentIntroduction = student1.sayHello();
         System.out.println(studentIntroduction);
     }
 }
