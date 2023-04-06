@@ -8,8 +8,7 @@ public class Main {
         Product product2 = new Product("Pencil", 1.99);
 
         Customer customer1 = new Customer("j@j.com",
-                new Product[] { product1, product2 });
-        CustomerName customer1Name = new CustomerName("John", "Doe", "Smith");
+                new Product[] { product1, product2 }, new CustomerName("John", "Doe", "Smith"));
 
         Address customer1Address = new Address(true, 125, "Main street", "New York City", "New York");
         Address customer2Address = new Address(false, 215, "Second street", "New York City", "New York");
@@ -17,7 +16,6 @@ public class Main {
         customer1.addAddress(customer1Address);
         customer1.addAddress(customer2Address);
 
-        customer1Name.printName();
         customer1.getCustomerInfo();
     }
 }
