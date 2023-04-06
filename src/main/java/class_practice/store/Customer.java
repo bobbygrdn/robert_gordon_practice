@@ -14,22 +14,6 @@ public class Customer {
         this.customerName = customerName;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Product[] getPurchasedProducts() {
-        return purchasedProducts;
-    }
-
-    public void setPurchasedProducts(Product[] purchasedProducts) {
-        this.purchasedProducts = purchasedProducts;
-    }
-
     public void getCustomerInfo() {
         customerName.printName();
         System.out.println("Email: " + email);
@@ -56,5 +40,21 @@ public class Customer {
         }
         newAddresses[addresses.length] = address;
         this.addresses = newAddresses;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Product[] getPurchasedProducts() {
+        return purchasedProducts;
+    }
+
+    public void setPurchasedProducts(Product[] purchasedProducts) {
+        this.purchasedProducts = purchasedProducts;
     }
 }
