@@ -1,4 +1,4 @@
-package inheritance.employee_app.com_hr_personnel;
+package inheritance.employee_app.com.hr.personnel;
 
 import java.time.LocalDate;
 
