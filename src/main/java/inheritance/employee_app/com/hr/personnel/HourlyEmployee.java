@@ -11,6 +11,16 @@ public class HourlyEmployee extends Employee {
         super(name, hireDate);
     }
 
+    public HourlyEmployee(String name, LocalDate hireDate, int hoursWorkedPerMonth, double hourlyRate) {
+        super(name, hireDate);
+        this.hoursWorkedPerMonth = hoursWorkedPerMonth;
+        this.hourlyRate = hourlyRate;
+    }
+
+    public double computeMonthlyCompensation() {
+        return hourlyRate * hoursWorkedPerMonth;
+    }
+
     public int getHoursWorkedPerMonth() {
         return hoursWorkedPerMonth;
     }
