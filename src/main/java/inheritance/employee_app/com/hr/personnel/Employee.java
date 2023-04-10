@@ -26,6 +26,10 @@ public class Employee {
         return years;
     }
 
+    public double computeMonthlyCompensation() {
+        return 0.0;
+    }
+
     public String getName() {
         return name;
     }
