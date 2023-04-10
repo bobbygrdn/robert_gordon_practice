@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class CommissionedEmployee extends Employee {
     private double commissionRate;
-    private int monthlySales;
+    private double monthlySales;
 
     public CommissionedEmployee(String name, LocalDate hireDate, double commissionRate, int monthlySales) {
         super(name, hireDate);
