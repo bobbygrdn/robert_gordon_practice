@@ -1,4 +1,4 @@
-package inheritance.employee_app.com.hr.personnel;
+package inheritance_polymorphism.employee_app.com.hr.personnel;
 
 public class Department {
     String name;

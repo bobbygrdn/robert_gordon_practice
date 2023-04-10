@@ -1,4 +1,4 @@
-package inheritance.people;
+package inheritance_polymorphism.people;
 
 public class Main {
     public static void main(String[] args) {
