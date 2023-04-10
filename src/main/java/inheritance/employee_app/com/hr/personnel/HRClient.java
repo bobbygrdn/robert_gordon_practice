@@ -6,9 +6,9 @@ public class HRClient {
     public static void main(String[] args) {
         Department department = new Department("I.T.", "Sunnyvale, California");
 
-        SalariedEmployee employee1 = new SalariedEmployee("John", LocalDate.of(2022, 10, 25));
-        SalariedEmployee employee2 = new SalariedEmployee("Mary", LocalDate.of(2023, 02, 10));
-        HourlyEmployee employee3 = new HourlyEmployee("Charles", LocalDate.of(2021, 07, 18));
+        SalariedEmployee employee1 = new SalariedEmployee("John", LocalDate.of(2022, 10, 25), 5000.0);
+        SalariedEmployee employee2 = new SalariedEmployee("Mary", LocalDate.of(2023, 02, 10), 6000.0);
+        HourlyEmployee employee3 = new HourlyEmployee("Charles", LocalDate.of(2021, 07, 18), 8, 2000.0);
 
         department.addEmployee(employee1);
         department.addEmployee(employee2);
