@@ -26,6 +26,16 @@ public class Department {
         return numberOfEmployees;
     }
 
+    public double computeDepartmentMonthlyTotalCompensation() {
+        double totalCompensation = 0.0;
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null) {
+                totalCompensation += employees[i].computeMonthlyCompensation();
+            }
+        }
+        return totalCompensation;
+    }
+
     public String getName() {
         return name;
     }
