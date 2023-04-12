@@ -22,6 +22,6 @@ public class CommissionedEmployee extends Employee {
 
     public String getEmployeeInfo() {
         return super.getName() + " who was hired on " + super.getHireDate() + " made $" + computeMonthlyCompensation()
-                + "on commission this month.";
+                + " on commission this month.";
     }
 }
