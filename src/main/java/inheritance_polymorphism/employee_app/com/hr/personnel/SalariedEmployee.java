@@ -19,6 +19,11 @@ public class SalariedEmployee extends Employee {
         return monthlySalary;
     }
 
+    public String getEmployeeInfo() {
+        return super.getName() + " who was hired on " + super.getHireDate() + " earned $" + getMonthlySalary()
+                + " this month.";
+    }
+
     public double getMonthlySalary() {
         return monthlySalary;
     }
