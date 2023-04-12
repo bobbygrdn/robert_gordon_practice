@@ -2,7 +2,7 @@ package inheritance_polymorphism.employee_app.com.hr.personnel;
 
 import java.time.LocalDate;
 
-public class Employee {
+public abstract class Employee {
     private String name;
     private LocalDate hireDate;
 
@@ -11,9 +11,7 @@ public class Employee {
         this.hireDate = hireDate;
     }
 
-    public String getEmployeeInfo() {
-        return "Name: " + name + ", Hire Date: " + hireDate;
-    }
+    public abstract String getEmployeeInfo();
 
     public String work() {
         return name + " worked.";
@@ -26,9 +24,7 @@ public class Employee {
         return years;
     }
 
-    public double computeMonthlyCompensation() {
-        return 0.0;
-    }
+    public abstract double computeMonthlyCompensation();
 
     public String getName() {
         return name;
