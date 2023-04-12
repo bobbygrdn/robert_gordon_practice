@@ -23,7 +23,8 @@ public class HourlyEmployee extends Employee {
 
     public String getEmployeeInfo() {
         return super.getName() + " who was hired on " + super.getHireDate() + " worked for " + hoursWorkedPerMonth
-                + " hours this month with an hourly rate of $" + hourlyRate + " per hour.";
+                + " hours this month with an hourly rate of $" + hourlyRate + " per hour, made $"
+                + computeMonthlyCompensation();
     }
 
     public int getHoursWorkedPerMonth() {
