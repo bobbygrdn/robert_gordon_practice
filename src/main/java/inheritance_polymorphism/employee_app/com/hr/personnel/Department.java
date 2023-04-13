@@ -19,7 +19,10 @@ public class Department {
     public int letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked() {
         int numberOfEmployees = 0;
         for (int i = 0; i < employees.length; i++) {
-            if (i < currentIndex) {
+            if (i >= currentIndex) {
+                break;
+            }
+            if (i < currentIndex && employees[i].work().equals("worked")) {
                 numberOfEmployees++;
             }
         }
@@ -29,7 +32,10 @@ public class Department {
     public double computeDepartmentMonthlyTotalCompensation() {
         double totalCompensation = 0.0;
         for (int i = 0; i < employees.length; i++) {
-            if (i < currentIndex) {
+            if (i >= currentIndex) {
+                break;
+            }
+            if (i < currentIndex && employees[i].work().equals("worked")) {
                 totalCompensation += employees[i].computeMonthlyCompensation();
             }
         }
