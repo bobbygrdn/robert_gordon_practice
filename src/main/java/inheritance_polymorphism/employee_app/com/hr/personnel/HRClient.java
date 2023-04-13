@@ -1,6 +1,8 @@
 package inheritance_polymorphism.employee_app.com.hr.personnel;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class HRClient {
     public static void main(String[] args) {
@@ -10,7 +12,7 @@ public class HRClient {
         SalariedEmployee employee2 = new SalariedEmployee("Mary", LocalDate.of(2023, 02, 10), 8000.0);
         HourlyEmployee employee3 = new HourlyEmployee("Charles", LocalDate.of(2021, 07, 18), 120, 45.0);
         CommissionedEmployee employee4 = new CommissionedEmployee("Michael", LocalDate.of(2022, 06, 13), 0.5,
-                new double[] { 5000.0, 6000.0 });
+                new ArrayList<>(Arrays.asList(5000.0, 6000.0)));
 
         department.addEmployee(employee1);
         department.addEmployee(employee2);

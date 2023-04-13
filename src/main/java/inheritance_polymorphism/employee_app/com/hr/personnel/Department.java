@@ -1,10 +1,11 @@
 package inheritance_polymorphism.employee_app.com.hr.personnel;
 
+import java.util.ArrayList;
+
 public class Department {
     String name;
     String location;
-    Employee[] employees = new Employee[100];
-    int currentIndex = 0;
+    ArrayList<Employee> employees = new ArrayList<>();
 
     public Department(String name, String location) {
         this.name = name;
@@ -12,17 +13,13 @@ public class Department {
     }
 
     public void addEmployee(Employee employee) {
-        this.employees[currentIndex] = employee;
-        currentIndex++;
+        employees.add(employee);
     }
 
     public int letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked() {
         int numberOfEmployees = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (i >= currentIndex) {
-                break;
-            }
-            if (i < currentIndex && employees[i].work().equals("worked")) {
+        for (Employee employee : employees) {
+            if (employee.work().equals("worked")) {
                 numberOfEmployees++;
             }
         }
@@ -31,12 +28,9 @@ public class Department {
 
     public double computeDepartmentMonthlyTotalCompensation() {
         double totalCompensation = 0.0;
-        for (int i = 0; i < employees.length; i++) {
-            if (i >= currentIndex) {
-                break;
-            }
-            if (i < currentIndex && employees[i].work().equals("worked")) {
-                totalCompensation += employees[i].computeMonthlyCompensation();
+        for (Employee employee : employees) {
+            if (employee.work().equals("worked")) {
+                totalCompensation += employee.computeMonthlyCompensation();
             }
         }
         return totalCompensation;
