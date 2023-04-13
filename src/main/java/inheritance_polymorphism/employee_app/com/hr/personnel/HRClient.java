@@ -46,5 +46,7 @@ public class HRClient {
         int departmentInfo = department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked();
         System.out.printf("We have %d employees working in the %s department at our %s location.\n", departmentInfo,
                 department.getName(), department.getLocation());
+        System.out.printf("The %s department employees have a total monthly salary of $%.2f.\n", department.getName(),
+                department.computeDepartmentMonthlyTotalCompensation());
     }
 }
