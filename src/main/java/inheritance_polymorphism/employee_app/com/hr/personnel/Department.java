@@ -3,9 +3,9 @@ package inheritance_polymorphism.employee_app.com.hr.personnel;
 import java.util.ArrayList;
 
 public class Department {
-    String name;
-    String location;
-    ArrayList<Employee> employees = new ArrayList<>();
+    private String name;
+    private String location;
+    private ArrayList<Employee> employees = new ArrayList<>();
 
     public Department(String name, String location) {
         this.name = name;
