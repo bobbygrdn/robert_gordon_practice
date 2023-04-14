@@ -24,8 +24,8 @@ public class Main {
 
         itemsList.remove("TV");
 
-        int newListSize = itemsList.size();
-        System.out.println("List size: " + newListSize);
+        listSize = itemsList.size();
+        System.out.println("List size: " + listSize);
 
         Collection<String> listKeys = itemsList.keySet();
         System.out.println("Keys: ");
