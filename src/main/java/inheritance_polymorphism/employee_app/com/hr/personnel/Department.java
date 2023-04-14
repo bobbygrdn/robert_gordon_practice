@@ -1,11 +1,12 @@
 package inheritance_polymorphism.employee_app.com.hr.personnel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Department {
     private String name;
     private String location;
-    private ArrayList<Employee> employees = new ArrayList<>();
+    private List<Employee> employees = new ArrayList<>();
 
     public Department(String name, String location) {
         this.name = name;
@@ -50,6 +51,14 @@ public class Department {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
     }
 
 }
