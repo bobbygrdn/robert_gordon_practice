@@ -17,7 +17,7 @@ public class Main {
                 String[] words = line.split("  ");
 
                 System.out.printf("%-20s\n %-20s\n %-10.2f\n %-10d\n",
-                        words[0], words[1], parseDouble(words[2]), parseInt(words[3]));
+                        words[0], words[1], Double.parseDouble(words[2]), Integer.parseInt(words[3]));
                 System.out.println();
 
             }
