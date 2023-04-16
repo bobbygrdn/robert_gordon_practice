@@ -16,7 +16,7 @@ public class Main {
                 String line = scanner.nextLine();
                 String[] words = line.split("  ");
 
-                System.out.printf("%-20s\n %-20s\n %-20.2f\n %d\n",
+                System.out.printf("%-20s\n %-20s\n %-10.2f\n %-10d\n",
                         words[0], words[1], parseDouble(words[2]), parseInt(words[3]));
                 System.out.println();
 
