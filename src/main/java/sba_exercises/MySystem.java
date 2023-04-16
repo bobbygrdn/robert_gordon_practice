@@ -23,15 +23,12 @@ public class MySystem {
     }
 
     public void printCurrentItems() {
-        for (String key : myItemsInHashMap.keySet()) {
-            Item item = myItemsInHashMap.get(key);
-            System.out.println(item.toString());
-            System.out.println();
+        for (String item : myItemsInHashMap.keySet()) {
+            Item elemenItem = myItemsInHashMap.get(item);
+            System.out.printf("%-20s%-20s%-10.2f%-10d\n", elemenItem.getItemName(),
+                    elemenItem.getItemDescription(),
+                    elemenItem.getPrice(), elemenItem.getAvailableQuantity());
         }
-    }
-
-    public void printCurrentLength() {
-        System.out.println("The current number of the items you have is: " + myItemsInHashMap.keySet().size());
         System.out.println();
     }
 
@@ -40,8 +37,28 @@ public class MySystem {
             myItemsInHashMap.put(item.getItemName(), item);
             return item;
         }
-        System.out.printf("%s is already present. Cannot be added.\n\n", item.getItemName());
         return null;
+    }
+
+    public Item removeItem(String itemName) {
+        if (myItemsInHashMap.containsKey(itemName)) {
+            myItemsInHashMap.remove(itemName);
+            return myItemsInHashMap.get(itemName);
+        }
+        return null;
+    }
+
+    public Item reduceAvailableQuantity(String string) {
+        if (myItemsInHashMap.containsKey(string)) {
+            Item item = myItemsInHashMap.get(string);
+            item.setAvailableQuantity(item.getAvailableQuantity() - 1);
+            if (item.getAvailableQuantity() == 0) {
+                myItemsInHashMap.remove(string);
+            }
+            return item;
+        } else {
+            return null;
+        }
     }
 
     public Map<String, Item> getMyItemsInHashMap() {
