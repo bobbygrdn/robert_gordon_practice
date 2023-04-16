@@ -8,9 +8,11 @@ public class Item {
     private Integer availableQuantity;
 
     public Item() {
+        this.quantity = 1;
     }
 
     public Item(String itemName, String itemDescription, Double price, Integer availableQuantity) {
+        this();
         this.itemName = itemName;
         this.itemDescription = itemDescription;
         this.price = price;
@@ -55,12 +57,6 @@ public class Item {
 
     public void setAvailableQuantity(Integer availableQuantity) {
         this.availableQuantity = availableQuantity;
-    }
-
-    @Override
-    public String toString() {
-        return "item Name " + itemName + "\nitem Description " + itemDescription + "\nitem Price " + price
-                + "\nitem AvailableQuantity " + availableQuantity;
     }
 
 }
