@@ -16,13 +16,12 @@ public class Main {
                 String line = scanner.nextLine();
                 String[] words = line.split("  ");
 
-                System.out.printf("item Name %s\nitem Description %s\nitem Price %s\nitem AvailableQuantity %s\n",
-                        words[0], words[1], words[2], words[3]);
+                System.out.printf("%-20s\n %-20s\n %-20.2f\n %d\n",
+                        words[0], words[1], parseDouble(words[2]), parseInt(words[3]));
                 System.out.println();
 
             }
             scanner.close();
-            System.out.println("----------------\n");
         } catch (FileNotFoundException e) {
         }
 
