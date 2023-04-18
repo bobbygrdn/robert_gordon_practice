@@ -22,7 +22,14 @@ public class HourlyEmployee extends Employee {
     }
 
     public double computeMonthlyTaxToPay() {
-        return hourlyRate * hoursWorkedPerMonth * HOURLY_TAX_RATE;
+        double monthlyTax = hourlyRate * hoursWorkedPerMonth * HOURLY_TAX_RATE
+                - DEFAULT_STANDARD_EMPLOYEE_MONTHLY_DEDUCTION;
+
+        if (monthlyTax <= DEFAULT_STANDARD_EMPLOYEE_MONTHLY_DEDUCTION) {
+            return 0.0;
+        } else {
+            return monthlyTax;
+        }
     }
 
     public String getEmployeeInfo() {

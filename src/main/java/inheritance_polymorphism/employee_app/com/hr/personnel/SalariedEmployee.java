@@ -20,7 +20,13 @@ public class SalariedEmployee extends Employee {
     }
 
     public double computeMonthlyTaxToPay() {
-        return monthlySalary * SALARIED_TAX_RATE;
+        double monthlyTax = monthlySalary * SALARIED_TAX_RATE - DEFAULT_STANDARD_EMPLOYEE_MONTHLY_DEDUCTION;
+
+        if (monthlyTax <= DEFAULT_STANDARD_EMPLOYEE_MONTHLY_DEDUCTION) {
+            return 0.0;
+        } else {
+            return monthlyTax;
+        }
     }
 
     public String getEmployeeInfo() {
