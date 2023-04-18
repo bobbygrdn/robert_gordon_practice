@@ -22,6 +22,10 @@ public class CommissionedEmployee extends Employee {
         return commissionRate * result;
     }
 
+    public double computeMonthlyTaxToPay() {
+        return 0.0;
+    }
+
     public String getEmployeeInfo() {
         return super.getName() + " who was hired on " + super.getHireDate() + " made $" + computeMonthlyCompensation()
                 + " on commission this month.";

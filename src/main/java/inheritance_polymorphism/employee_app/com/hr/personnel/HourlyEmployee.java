@@ -21,6 +21,10 @@ public class HourlyEmployee extends Employee {
         return hourlyRate * hoursWorkedPerMonth;
     }
 
+    public double computeMonthlyTaxToPay() {
+        return hourlyRate * hoursWorkedPerMonth * HOURLY_TAX_RATE;
+    }
+
     public String getEmployeeInfo() {
         return super.getName() + " who was hired on " + super.getHireDate() + " worked for " + hoursWorkedPerMonth
                 + " hours this month with an hourly rate of $" + hourlyRate + " per hour, made $"
