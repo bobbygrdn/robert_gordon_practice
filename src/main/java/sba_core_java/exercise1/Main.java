@@ -23,14 +23,16 @@ public class Main {
 
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter an integer: ");
-            if (scanner.hasNextInt()) {
+            if (!scanner.hasNextInt()) {
+                try {
+                    throw new MyOwnException("Invalid integer");
+                } catch (MyOwnException e) {
+                    System.out.println(e.getMessage());
+                }
+            } else {
                 Integer newInt = scanner.nextInt();
                 System.out.println(newInt);
-            } else {
-                throw new MyOwnException("Invalid integer");
             }
-        } catch (MyOwnException e) {
-            System.out.println(e.getMessage());
         }
 
     }
