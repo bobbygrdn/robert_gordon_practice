@@ -1,3 +1,5 @@
+USE `SBA_MOCKUP`;
+
 -- Create a query to return all orders made by users with the first name of "Marion"
 
 select orders.order_id, users.user_id, stores.store_id
