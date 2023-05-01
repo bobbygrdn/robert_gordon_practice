@@ -68,7 +68,7 @@ select stores.name AS NAME,
 count(distinct orders.order_id) AS ORDER_QUANTITY,
     case
         when count(orders.store_id) > 3 then 'High'
-        when count(orders.store_id) > 1 then 'Medium'
+        when count(orders.store_id) between 2 and 3 then 'Medium'
         else 'Low'
     end as SALES_FIGURE
 from stores
