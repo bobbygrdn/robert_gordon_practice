@@ -33,23 +33,21 @@
 -- group by course.name
 -- order by num_students desc, course.name;
 
--- Create a query that lists the TotalNumber of Students that were enrolled in classes during each School Year.
--- The first column should have the header "Students".
--- Provide a second "Year" column showing the enrollment year.
+-- Create a query that lists the TotalNumber of Students that were enrolled in classes during each School Year. The first column should have the header "Students". Provide a second "Year" column showing the enrollment year.
 -- The output should be sorted first by the School Year in ascending order, then by Total Number of Students in descending order.
 
-select studentCourse.startDate as 'Year', count(studentCourse.studentId) as num_students
+select count(distinct studentId) as 'Students', year(startDate) as 'Year'
 from studentCourse
-group by studentCourse.startDate
-order by studentCourse.startDate, num_students desc;
+group by year(startDate)
+order by year(startDate) asc, count(distinct studentId) desc;
 
 -- Create a query that lists the Start Date and Total Number of Students who enrolled in classes in August of each year. The output should be ordered by the Start Date in ascending order, then by Total Number of Students in ascending order.
 
-select studentCourse.startDate, count(studentCourse.studentId) as 'Students'
-from studentCourse
-where MONTH(studentCourse.startDate) = 8
-group by studentCourse.startDate
-order by studentCourse.startDate, count(studentCourse.studentId) desc;
+-- select studentCourse.startDate, count(distinct studentCourse.studentId) as 'Students'
+-- from studentCourse
+-- where MONTH(studentCourse.startDate) = 8
+-- group by studentCourse.startDate
+-- order by studentCourse.startDate, count(*) desc;
 
 -- Create a query that lists students firstname, lastname, and the number of courses they are taking in their major department. The output should be sorted by the number of courses in descending order, then by first name in ascending order, then by the last name in ascending order.
 
